@@ -1,0 +1,314 @@
+@import "node_modules/bootstrap-toggle/css/bootstrap-toggle";
+@import "node_modules/select2/dist/css/select2";
+@import "node_modules/select2-bootstrap-theme/dist/select2-bootstrap";
+//////////////////////////////////////////////////////////////////////////////
+/// COLORS DEFINITION
+//////////////////////////////////////////////////////////////////////////////
+$body-bg: #fff;
+
+.alert-container {
+  top: 2em;
+  right: 0;
+  left: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.img-thumbnail {
+  max-height: 100px;
+}
+
+/*
+ * Skin: Vendredi
+ * ------------
+ */
+.skin-purple .main-header .navbar {
+  background-color: #4FC1B5;
+}
+
+.skin-purple .main-header .navbar .nav > li > a {
+  color: #ffffff;
+}
+
+.skin-purple .main-header .navbar .nav > li > a:hover,
+.skin-purple .main-header .navbar .nav > li > a:active,
+.skin-purple .main-header .navbar .nav > li > a:focus,
+.skin-purple .main-header .navbar .nav .open > a,
+.skin-purple .main-header .navbar .nav .open > a:hover,
+.skin-purple .main-header .navbar .nav .open > a:focus,
+.skin-purple .main-header .navbar .nav > .active > a {
+  background: #459186;
+  color: #f6f6f6;
+}
+
+.skin-purple .main-header .navbar .sidebar-toggle {
+  color: #ffffff;
+}
+
+.skin-purple .main-header .navbar .sidebar-toggle:hover {
+  color: #f6f6f6;
+  background: #459186;
+}
+
+.skin-purple .main-header .navbar .sidebar-toggle {
+  color: #fff;
+}
+
+.skin-purple .main-header .navbar .sidebar-toggle:hover {
+  background-color: #4AA599;
+}
+
+@media (max-width: 767px) {
+  .skin-purple .main-header .navbar .dropdown-menu li.divider {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .skin-purple .main-header .navbar .dropdown-menu li a {
+    color: #fff;
+  }
+  .skin-purple .main-header .navbar .dropdown-menu li a:hover {
+    background: #4AA599;
+  }
+}
+
+.skin-purple .main-header .logo {
+  background-color: #4AA599;
+  color: #ffffff;
+  border-bottom: 0 solid transparent;
+}
+
+.skin-purple .main-header .logo:hover {
+  background-color: #459186;
+}
+
+.skin-purple .main-header li.user-header {
+  background-color: #4FC1B5;
+}
+
+.skin-purple .content-header {
+  background: transparent;
+}
+
+.skin-purple .wrapper,
+.skin-purple .main-sidebar,
+.skin-purple .left-side {
+  background-color: #47425C;
+}
+
+.skin-purple .user-panel > .info,
+.skin-purple .user-panel > .info > a {
+  color: #fff;
+}
+
+.skin-purple .sidebar-menu > li.header {
+  color: #6c919c;
+  background: #3e3c4b;
+}
+
+.skin-purple .sidebar-menu > li > a {
+  border-left: 3px solid transparent;
+}
+
+.skin-purple .sidebar-menu > li:hover > a,
+.skin-purple .sidebar-menu > li.active > a {
+  color: #ffffff;
+  background: #383548;
+  border-left-color: #4FC1B5;
+}
+
+.skin-purple .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+  background: #2c3b41;
+}
+
+.skin-purple .sidebar a {
+  color: #b8c7ce;
+}
+
+.skin-purple .sidebar a:hover {
+  text-decoration: none;
+}
+
+.skin-purple .treeview-menu > li > a {
+  color: #8aa4af;
+}
+
+.skin-purple .treeview-menu > li.active > a,
+.skin-purple .treeview-menu > li > a:hover {
+  color: #ffffff;
+}
+
+.skin-purple .sidebar-form {
+  border-radius: 3px;
+  border: 1px solid #374850;
+  margin: 10px 10px;
+}
+
+.skin-purple .sidebar-form input[type="text"],
+.skin-purple .sidebar-form .btn {
+  box-shadow: none;
+  background-color: #374850;
+  border: 1px solid transparent;
+  height: 35px;
+}
+
+/*  AdminLTE Overwrites  */
+
+body[class^='skin-purple'] .btn-primary {
+  color: #fff;
+  background-color: #4FC1B5;
+  border-color: #49a397;
+}
+
+body[class^='skin-purple'] .btn-primary:focus,
+body[class^='skin-purple'] .btn-primary.focus {
+  color: #fff;
+  background-color: #5adace;
+  border-color: #3f8088;
+}
+
+body[class^='skin-purple'] .btn-primary:hover {
+  color: #fff;
+  background-color: #5adace;
+  border-color: #49a397;
+}
+
+body[class^='skin-purple'] .btn-primary:active,
+body[class^='skin-purple'] .btn-primary.active,
+body[class^='skin-purple'] .open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #5adace;
+  border-color: #49a397;
+}
+
+body[class^='skin-purple'] .btn-primary:active:hover,
+body[class^='skin-purple'] .btn-primary.active:hover,
+body[class^='skin-purple'] .open > .dropdown-toggle.btn-primary:hover,
+body[class^='skin-purple'] .btn-primary:active:focus,
+body[class^='skin-purple'] .btn-primary.active:focus,
+body[class^='skin-purple'] .open > .dropdown-toggle.btn-primary:focus,
+body[class^='skin-purple'] .btn-primary:active.focus,
+body[class^='skin-purple'] .btn-primary.active.focus,
+body[class^='skin-purple'] .open > .dropdown-toggle.btn-primary.focus {
+  color: #fff;
+  background-color: #49a397;
+  border-color: #3f8088;
+}
+
+body[class^='skin-purple'] .btn-primary.disabled,
+body[class^='skin-purple'] .btn-primary[disabled],
+body[class^='skin-purple'] fieldset[disabled] .btn-primary,
+body[class^='skin-purple'] .btn-primary.disabled:hover,
+body[class^='skin-purple'] .btn-primary[disabled]:hover,
+body[class^='skin-purple'] fieldset[disabled] .btn-primary:hover,
+body[class^='skin-purple'] .btn-primary.disabled:focus,
+body[class^='skin-purple'] .btn-primary[disabled]:focus,
+body[class^='skin-purple'] fieldset[disabled] .btn-primary:focus,
+body[class^='skin-purple'] .btn-primary.disabled.focus,
+body[class^='skin-purple'] .btn-primary[disabled].focus,
+body[class^='skin-purple'] fieldset[disabled] .btn-primary.focus,
+body[class^='skin-purple'] .btn-primary.disabled:active,
+body[class^='skin-purple'] .btn-primary[disabled]:active,
+body[class^='skin-purple'] fieldset[disabled] .btn-primary:active,
+body[class^='skin-purple'] .btn-primary.disabled.active,
+body[class^='skin-purple'] .btn-primary[disabled].active,
+body[class^='skin-purple'] fieldset[disabled] .btn-primary.active {
+  background-color: #4FC1B5;
+  border-color: #49a397;
+}
+
+body[class^='skin-purple'] .btn-primary .badge {
+  color: #4FC1B5;
+  background-color: #fff;
+}
+
+body[class^='skin-purple'] .pagination > .active > a,
+body[class^='skin-purple'] .pagination > .active > a:focus,
+body[class^='skin-purple'] .pagination > .active > a:hover,
+body[class^='skin-purple'] .pagination > .active > span,
+body[class^='skin-purple'] .pagination > .active > span:focus,
+body[class^='skin-purple'] .pagination > .active > span:hover {
+  background-color: #4FC1B5;
+  border-color: #49a397;
+}
+
+/*    BORDER HELPERS  */
+
+.b-transparent {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.b-transparent-white {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.b-grey {
+  border-color: #e6e6e6;
+}
+
+.b-white {
+  border-color: #fff;
+}
+
+.b-primary {
+  border-color: #316c62;
+}
+
+.b-complete {
+  border-color: #439286;
+}
+
+.b-success {
+  border-color: #10cfbd;
+}
+
+.b-info {
+  border-color: #3b4752;
+}
+
+.b-danger {
+  border-color: #f55753;
+}
+
+.b-warning {
+  border-color: #f8d053;
+}
+
+@import "variables";
+
+@font-face {
+  font-family: 'Mark Pro';
+  src: url('/fonts/MarkPro-Bold.eot');
+  src: url('/fonts/MarkPro-Bold.woff2') format('woff2'),
+  url('/fonts/MarkPro-Bold.woff') format('woff'),
+  url('/fonts/MarkPro-Bold.ttf') format('truetype'),
+  url('/fonts/MarkPro-Bold.svg#MarkPro-Bold') format('svg'),
+  url('/fonts/MarkPro-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body[class^='skin-purple'] .render-as-public-site {
+  @import "app";
+}
+
+#preview-container-job-description{
+  background: $color-anti-flash-white;
+}
+
+#preview-container-association-description{
+  background: $color-serenade;
+}
+
+$card-width: 1280px/3;
+.preview-container {
+  margin: auto;
+  width: $card-width + 2*40px;
+  height: 640px;
+  overflow: hidden;
+  padding: 40px;
+
+  .preview {
+    width: 3*$card-width;
+  }
+}

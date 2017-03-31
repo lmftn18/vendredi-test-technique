@@ -1,0 +1,185 @@
+//////////////////////////////////////////////////////////////////////////////
+/// EQUIPE
+//////////////////////////////////////////////////////////////////////////////
+
+.equipe-title {
+  font-size: 24px;
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+}
+
+.equipe-subtitle {
+  margin-top: 15px;
+  font-size: 14px;
+
+  font-weight: 300;
+  text-align: center;
+  color: $color-bokara-black;
+
+  @media (min-width: 768px) {
+    margin-top: 40px;
+    font-size: 24px;
+  }
+}
+
+#equipe-hero {
+  overflow: auto;
+
+  .equipe-hero-title {
+    position: absolute;
+    z-index: 200;
+
+    color: $color-fountain-blue;
+    font-size: 14px;
+    margin-top: 16px;
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 50px;
+      margin-top: 60px;
+    }
+  }
+
+  #equipe-hero-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+#equipe-soutiens, #equipe-nous-rejoindre {
+  padding: 18px 20px;
+  @media (min-width: 768px) {
+    padding: 40px 60px;
+  }
+}
+
+#equipe-nous-rejoindre {
+  background: $color-anti-flash-white;
+}
+
+#equipe-soutiens {
+  background: $color-fountain-blue;
+  color: $color-white;
+}
+
+.equipe-secondary-title {
+  font-size: 24px;
+  margin-top: 0px !important;
+  @media (min-width: 768px) {
+    font-size: 40px;
+    margin-top: 22px;
+  }
+}
+
+.equipe-nous-rejoindre-subtitle {
+  font-weight: 300;
+  font-size: 15px;
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+ul.equipe-ul-job {
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 70px; // leaves room for the absolute positionned button
+  padding-left: 10px!important;
+
+  @media (min-width: 768px) {
+    padding-left: 40px;
+  }
+
+  li {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+
+    padding-left: 10px;
+    @media (min-width: 768px) {
+      font-size: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  li::before {
+    content: "• ";
+    color: white; /* or whatever color you prefer */
+
+    font-size: 14px;
+    bottom: 0px;
+
+    position: relative;
+
+
+
+    // Compensante the shifting so that two-lines li text appear aligned
+    right: 20px;
+    margin-right: -11px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      bottom: 2px;
+      margin-right: -15px;
+    }
+  }
+}
+
+$equipe-cta-width: 70%;
+$equipe-cta-width-mobile: 80%;
+
+.equipe-cta {
+  position: absolute;
+  bottom: 30px;
+
+  left: 50%;
+
+  width: $equipe-cta-width-mobile;
+  margin-left: -$equipe-cta-width-mobile/2;
+
+  @media (min-width: 768px) {
+    width: $equipe-cta-width;
+    margin-left: -$equipe-cta-width/2;
+  }
+
+}
+
+.equipe-soutiens-subtitle, .equipe-soutiens-text {
+
+  font-weight: 300;
+  a, a:hover {
+    font-weight: bold;
+    color: $color-white!important;
+  }
+
+}
+
+.equipe-soutiens-text {
+  margin-bottom: 80px; // leaves room for the absolute positionned button
+  font-size: 14px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.equipe-soutiens-subtitle{
+  margin-top: 20px;
+  font-size: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.equipe-soutiens-img {
+  height: 100px;
+  margin: 20px 0px;
+}

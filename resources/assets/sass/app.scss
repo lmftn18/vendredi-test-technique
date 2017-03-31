@@ -1,0 +1,48 @@
+
+// Fonts
+
+@font-face {
+  font-family: 'Mark Pro';
+  src: url('/fonts/MarkPro-Bold.eot');
+  src: url('/fonts/MarkPro-Bold.woff2') format('woff2'),
+  url('/fonts/MarkPro-Bold.woff') format('woff'),
+  url('/fonts/MarkPro-Bold.ttf') format('truetype'),
+  url('/fonts/MarkPro-Bold.svg#MarkPro-Bold') format('svg'),
+  url('/fonts/MarkPro-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+// For font-awesome import
+.btn .fa {
+  margin-right: 7px;
+}
+
+@import "mixins";
+// Variables
+@import "variables";
+
+// Bootstrap
+// with overriding (see _boostrap.scss)
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "overrides/mixins";
+@import "_bootstrap";
+
+
+// Our custom CSS
+@import "general";
+@import "header";
+@import "home";
+@import "concept";
+@import "partenaire";
+@import "entreprises";
+@import "equipe";
+@import "associations";
+@import "card-asso";
+@import "modal";
+
+// Components
+@import "components/search-bar";
+@import "components/loader";
+

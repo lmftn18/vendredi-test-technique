@@ -1,0 +1,403 @@
+// Only for Vue.js see https://vuejs.org/v2/api/#v-cloak
+[v-cloak] {
+  display: none
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// MAIN GRID
+//////////////////////////////////////////////////////////////////////////////
+
+.container-vendredi {
+  max-width: 1360px !important;
+}
+
+.container-vendredi-mobile {
+  margin-top: 50px;
+}
+
+.block-vendredi {
+  margin-top: 40px;
+}
+
+.block-vendredi-mobile {
+  margin-top: 20px;
+}
+
+.text-overflow-center {
+  margin-left: -100%;
+  margin-right: -100%;
+  text-align: center;
+}
+
+.alert-container {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  left: 0;
+  z-index: 1045; // To work with boostrap settins
+}
+
+.help-block {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.panel {
+  margin-bottom: 40px !important;
+
+  &.panel-mobile {
+    margin-bottom: 20px !important;
+  }
+}
+
+.alert .close {
+  color: inherit !important;
+  text-shadow: none;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// BUTTONS COLORS AND STYLING
+//////////////////////////////////////////////////////////////////////////////
+
+a.btn {
+  //Compensate mis-alignment on anchor buttons
+  padding-top: 12px !important;
+}
+
+a.btn-sm {
+  //Compensate mis-alignment on anchor buttons
+  padding-top: 6px !important;
+
+}
+
+a.btn-lg {
+  //Compensate mis-alignment on anchor buttons
+  padding-top: 22px !important;
+}
+
+.btn {
+  text-transform: uppercase;
+  border: 0 !important;
+  height: 50px;
+  font-size: 15px !important;
+}
+
+.btn-sm {
+  height: 35px !important;
+  font-size: 15px !important;
+}
+
+.btn-lg {
+  height: 65px !important;
+  font-size: 15px !important;
+}
+
+.open > .btn-default.dropdown-toggle {
+  background-color: $color-white !important;
+
+  &.btn-dropdown-selected {
+    background-color: #E6E6E6 !important;
+  }
+}
+
+.btn-default.dropdown-toggle {
+  &.hover, &:hover, &:focus, &.focus {
+    background-color: $color-white !important;
+  }
+
+  &.btn-dropdown-selected {
+    background: #E6E6E6;
+  }
+}
+
+.btn-linkedin {
+  // We use !important because we need to overide previous definition and this class is not meant to be re-used
+  font-family: Lato !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  margin-bottom: 30px !important;
+
+  background-color: $color-linkedin;
+  color: $color-white;
+
+}
+
+.btn-linkedin:hover, .btn-linkedin:focus, .btn-linkedin.focus {
+  color: $color-white !important;
+  background-color: transparentize($color-linkedin, 0.4);
+}
+
+.btn-linkedin-logo {
+  height: 30px;
+  position: relative;
+  top: -3px;
+  margin-right: 10px;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// INPUTS
+//////////////////////////////////////////////////////////////////////////////
+
+// Remove default bootstrap box shadow
+.form-control {
+  box-shadow: none !important;
+}
+
+select.form-control {
+  text-transform: uppercase;
+  -webkit-border-radius: 0px;
+  -webkit-appearance: none;
+  background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  line-height: $line-height-computed !important;
+  background-color: $color-white;
+  font-weight: bold;
+}
+
+select.active {
+  background-color: $color-anti-flash-white;
+}
+
+select.input-sm {
+  padding-right: 30px;
+}
+
+.form-control.form-control-static {
+  line-height: 2.5;
+  .close-icon {
+    height: 18px;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// DROPDOWNS
+//////////////////////////////////////////////////////////////////////////////
+
+// Use to align the dropdown with the button when using btn-sm
+.dropdown-sm {
+  position: relative;
+  height: 35px;
+
+  &.dropdown-inline {
+    min-height: 35px;
+    height: 0; // Override value
+    clear: both;
+    .btn {
+      text-transform: none;
+      font-weight: 300;
+      color: #4a4a4a;
+      text-align: left;
+      font-size: 12px;
+    }
+
+    .dropdown-menu {
+      position: static !important;
+      margin-bottom: 10px;
+      width: 100%;
+      margin-top: 15px !important;
+      box-shadow: none;
+
+      &::before {
+        top: 40px;
+      }
+    }
+  }
+}
+
+.dropdown-menu-vendredi {
+  margin-top: 10px !important;
+  border: none !important;
+}
+
+// CSS trick to build the triangle on top of each dropdowns
+.dropdown-menu-vendredi::before {
+  z-index: inherit;
+  content: '';
+  width: 0;
+  height: 0;
+
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $color-white;
+
+  position: absolute;
+  top: -10px;
+  left: 50%;
+
+  margin-left: -10px;
+}
+
+// Customs active and hover states
+$icon-height: 18px;
+
+.dropdown-menu-vendredi > li > a
+.dropdown-menu-vendredi > li > a {
+  height: 28px;
+}
+
+.dropdown-menu-vendredi > .active > a {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.dropdown-menu-vendredi > li > a:hover::before,
+.dropdown-menu-vendredi > .active > a::before,
+.dropdown-menu-vendredi > .active > a:hover::before {
+  background-size: $icon-height $icon-height;
+
+  content: "";
+  height: $icon-height;
+  width: $icon-height;
+
+  display: inline-block;
+  position: relative;
+
+  // Compensate the positionning to keep the text on the same line (otherwise it would shift to bottom from 3px)
+  top: 3px;
+  margin-top: -3px;
+
+  margin-right: 3px;
+}
+
+.dropdown-menu-vendredi > .active > a::before {
+  background-image: url('/images/active-icon.png');
+}
+
+.dropdown-menu-vendredi > .active > a:hover::before {
+  background-image: url('/images/active-hover-icon.png');
+}
+
+.dropdown-menu-vendredi > li > a:hover {
+  padding-left: 10px;
+}
+
+.dropdown-menu-vendredi > li > a:hover::before {
+  background-image: url('/images/hover-icon.png');
+}
+
+.dropdown-menu.typeahead {
+  display: block;
+  margin-left: 10px;
+  margin-top: -15px;
+  top: 64px;
+
+  & > .active > a, & > .active > a:hover {
+    font-weight: bold;
+    background: $color-serenade;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// TABS
+//////////////////////////////////////////////////////////////////////////////
+//
+// Only use 'nav-pills', 'nav-tabs' option is not configure and does not match the design
+//
+
+.nav > li > a {
+  font-size: 18px;
+  font-weight: bold !important;
+  color: $color-black;
+  padding-bottom: 5px !important;
+}
+
+.nav-pills > li.active > a::before, .nav-pills > li > a:hover::before {
+  content: '';
+  width: 60%;
+  height: 0px;
+  border-top: 5px solid #282828;
+  position: absolute;
+  bottom: -2px;
+  left: 20%;
+}
+
+.nav-pills > li > a:hover, .nav-pills > li > a:focus {
+  background-color: transparent !important;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// PAGINATION
+//////////////////////////////////////////////////////////////////////////////
+
+.pagination > li > a {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  border: none;
+
+  font-size: 15px;
+  font-weight: bold;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// LABELS
+//////////////////////////////////////////////////////////////////////////////
+
+.label {
+  border-radius: 1px;
+  height: 22px;
+  line-height: 15px;
+  font-size: 10px;
+
+  padding: 4px 17px;
+
+  margin-right: 8px; // Increase spacing
+
+  &.label-cause {
+    background-color: $color-anti-flash-white !important;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  &.label-job {
+    background-color: rgba(255, 255, 255, 0.60) !important;
+    font-weight: 400;
+  }
+
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// MOBILE
+//////////////////////////////////////////////////////////////////////////////
+
+.expand-icon {
+  float: right;
+  position: relative;
+  top: 2px;
+
+  &::before {
+    display: inline-block;
+    content: '';
+    background: url('/images/expand-icon.png') no-repeat 0 0;
+    background-size: 100%;
+    height: 9px;
+    width: 8px;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// ADMIN PANEL
+//////////////////////////////////////////////////////////////////////////////
+#crudTable_wrapper > div:nth-of-type(2) > div {
+  overflow: scroll;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// SPECIAL CLASSES FOR THE DESIGN PAGE (DEV ONLY)
+//////////////////////////////////////////////////////////////////////////////
+.background-serenade {
+  background-color: $color-serenade;
+  padding: 10px 0;
+}
+
+.background-zircon {
+  background-color: $color-zircon;
+  padding: 10px 0;
+}
+
+.example-dropdown .dropdown {
+  display: inline-block;
+}

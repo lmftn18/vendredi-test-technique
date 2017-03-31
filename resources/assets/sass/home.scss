@@ -1,0 +1,721 @@
+$navbar-inverse-link-color: $color-white;
+$navbar-inverse-border: 0;
+
+.navbar-home {
+  background-color: transparent !important;
+
+  &.navbar-mobile .navbar-collapse {
+    background: $color-white !important;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// HERO
+//////////////////////////////////////////////////////////////////////////////
+
+#hero {
+  width: 100%;
+  min-height: 60vh;
+  max-height: 100vh;
+
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  color: $color-white;
+  position: relative;
+  top: -120px;
+  margin-bottom: -120px;
+
+  overflow: hidden;
+  background: none;
+
+  .hero-text {
+    position: relative;
+    z-index: 10; // Only to have it always on top of the slider
+  }
+
+  @keyframes slide-in {
+    0%   {left: 100%;}
+    100% {left: 0;}
+  }
+
+  @keyframes fade-in {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    &.slide-in {
+      animation-name: fade-in;
+      animation-duration: 1.2s;
+      z-index: 5;
+    }
+  }
+
+  &.hero-mobile {
+    position: relative;
+    overflow: hidden;
+    background: none;
+
+    margin-top: 0;
+    padding-top: 200px;
+    padding-bottom: 20px;
+    margin-bottom: -50px;
+    top: 0;
+
+    #hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width:auto;
+    }
+  }
+}
+
+.hero-slider {
+  margin-top: 20px;
+
+  background: rgba(0,0,0,0.2);
+  padding: 0 8px;
+  display: inline-block;
+
+
+  #slider-day{
+    margin-left:  10px;
+    font-size: 18px;
+  }
+}
+
+.hero-title {
+  font-size: 60px;
+}
+
+.hero-subtitle {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  a {
+    margin-right: 10px;
+  }
+}
+
+.hero-mobile {
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+}
+.full-circle, .empty-circle {
+  cursor: pointer;
+  margin: 1px 3px;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.full-circle {
+  border: 5px solid white;
+}
+.empty-circle {
+  border: 1px solid white;
+
+}
+//////////////////////////////////////////////////////////////////////////////
+/// CONCEPT
+//////////////////////////////////////////////////////////////////////////////
+#home-concept, #home-semaine {
+  min-height: 42rem;
+
+  @media (max-width: 768px) {
+    min-height: 340px;
+  }
+}
+
+#home-concept {
+  background-color: $color-serenade;
+
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  padding-left: 60px;
+  padding-right: 40px;
+}
+
+.home-concept-subtitle {
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.popover-entreprise, .popover-association {
+  background-color: $color-white;
+  color: $color-bokara-black;
+  text-align: center;
+
+  padding: 8px 0;
+  margin: 2rem 0;
+  margin-bottom: 45px;
+  // Used only to fix the positionning (use by ::before)
+  position: relative;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.popover-entreprise::before, .popover-association::before {
+  z-index: inherit;
+  content: '';
+
+  width: 0;
+  height: 0;
+
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid $color-white;
+
+  @media (max-width: 768px) {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid $color-white;
+    bottom: -8px;
+    margin-left: -8px;
+  }
+
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+
+  margin-left: -15px;
+}
+
+.home-concept-entreprise, .home-concept-association {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+
+}
+
+.home-concept-entreprise {
+  width: 66%;
+  margin-right: 3%;
+}
+
+.home-concept-association {
+  width: 30%;
+  float: right;
+}
+
+.jour-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weekend-container {
+  display: flex;
+  justify-content: center;
+}
+
+.jour-wrap {
+  width: 4.5rem;
+  height: 6.5rem;
+
+  @media (max-width: 768px) {
+    width: 3.2rem !important;
+    height: 3.7rem !important;
+  }
+
+  text-align: center;
+
+  // Make sure that days never touch each other even on small screens
+  margin-right: 2px;
+}
+
+.jour {
+  text-align: left;
+  display: inline-block;
+
+  width: 4.5rem;
+  height: 4.5rem;
+
+  @media (max-width: 768px) {
+    width: 3.2rem !important;
+    height: 3.5rem !important;
+    border-top: .7rem solid $color-fountain-blue;
+    font-size: 15px;
+    line-height: 3rem;
+  }
+
+  font-family: $headings-font-family;
+  font-size: 26px;
+  font-weight: bold;
+  color: #34314C;
+
+  border-top: 1rem solid $color-fountain-blue;
+  background-color: $color-white;
+
+  padding-bottom: 5px;
+  padding-left: 5px;
+  margin-bottom: 15px;
+}
+
+.jour.jour-small-padding {
+  padding-left: 3px;
+}
+
+.weekend {
+  border-color: $color-bittersweet !important;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// SEMAINE EN IMAGES
+//////////////////////////////////////////////////////////////////////////////
+
+#home-semaine {
+  background-color: $color-green;
+  color: $color-white;
+
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#home-semaine-title {
+  width: 50%;
+  font-size: 40px;
+}
+
+.home-semaine-subtitle {
+  width: 50%;
+  font-weight: 300;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.home-semaine-button {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+#morgane {
+  height: 30rem;
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+}
+
+#home-semaine-mobile {
+  background-color: $color-green;
+  color: $color-white;
+  padding: 22px 24px;
+  min-height: 400px;
+
+  #home-semaine-mobile-title {
+    z-index: 1005;
+    font-size: 24px;
+    width: 90%;
+  }
+
+  .home-semaine-mobile-subtitle {
+    z-index: 1005;
+    font-size: 15px;
+    width: 90%;
+  }
+
+  .home-semaine-mobile-button {
+    z-index: 1005;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+#morgane-mobile {
+  z-index: 1000;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 80%;
+  max-height: 70%;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// VISION
+//////////////////////////////////////////////////////////////////////////////
+
+$home-vision-padding-left: 90px;
+$home-vision-padding-bottom: 60px;
+#home-vision {
+  background-color: $color-zircon;
+  min-height: 65rem;
+  padding-top: 60px;
+  padding-left: $home-vision-padding-left;
+  padding-bottom: $home-vision-padding-bottom;
+}
+
+#poster {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 65rem;
+}
+
+.home-vision-col {
+  margin-top: 60px;
+  width: 40rem;
+}
+
+.home-vision-subtext {
+  color: #a2a2a2;
+  font-size: 16px;
+}
+
+.home-vision-subtitle {
+  margin-top: 40px;
+}
+
+.home-vision-title {
+  width: 40%;
+  min-width: 500px;
+  font-size: 44px;
+}
+
+.home-vision-button {
+  position: absolute;
+  left: $home-vision-padding-left;
+  bottom: $home-vision-padding-bottom;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// NEWSLETTER
+//////////////////////////////////////////////////////////////////////////////
+
+#home-newsletter {
+  background-color: $color-gun-powder;
+  color: $color-white;
+  padding: 30px 60px;
+}
+
+#home-newsletter .row {
+  min-height: 150px;
+
+}
+
+.home-newsletter-subtitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 2.5rem;
+}
+
+.form-newsletter {
+  margin-top: 60px;
+}
+
+.form-newsletter input.form-control {
+  background-color: $color-white;
+  color: #4a4a4a;
+}
+
+.home-newsletter-prenom, .home-newsletter-nom {
+  width: 20% !important;
+}
+
+.home-newsletter-email, .home-newsletter-button {
+  width: 29% !important;
+}
+
+#home-newsletter-mobile {
+  background-color: $color-anti-flash-white;
+  padding: 12px 20px;
+  .home-newsletter-mobile-title {
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .home-newsletter-mobile-btn {
+    background-color: $color-gun-powder;
+    color: $color-white;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// OFFRES ENTREPRISE
+//////////////////////////////////////////////////////////////////////////////
+
+#home-offres {
+  background-color: $color-anti-flash-white;
+  padding: 30px 60px;
+  padding-bottom: 60px;
+}
+
+.btn-pagination-all {
+  margin: 22px;
+  position: absolute;
+  right: 0;
+}
+
+.center-pills {
+  display: flex;
+  justify-content: center;
+}
+
+.filters-row select, .filters-row .dropdown {
+  margin-left: 35px;
+}
+
+.filters-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.filters-row p {
+  line-height: 35px;
+  font-size: 18px;
+}
+
+.filters-row p, .filters-row .dropdown {
+  display: inline-block;
+}
+
+.tab-content {
+  margin-top: 30px;
+}
+
+.cards-panel {
+  margin-top: 30px;
+}
+
+.block-vendredi-mobile .cards-panel {
+  margin-top: 0;
+}
+//////////////////////////////////////////////////////////////////////////////
+/// MODAL SEMAINE DE MORGANE
+//////////////////////////////////////////////////////////////////////////////
+.modal-header-semaine-morgane {
+  padding-top: 30px !important;
+}
+
+.modal-title-semaine-morgane {
+  font-size: 40px;
+  line-height: 40px !important;
+  text-align: center;
+}
+
+.close-semaine-morgane {
+  margin-top: 6px !important;
+}
+
+.modal-subtitle-semaine-morgane {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.modal-body-youtube {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  // Youtube player add a blank line of 6px to the bottom and we want a 40x padding
+  padding-bottom: 34px !important;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// MODAL ILS ONT VECU UN VENDREID
+//////////////////////////////////////////////////////////////////////////////
+.modal-header-vecu {
+  padding-top: 30px !important;
+}
+
+.modal-title-vecu {
+  font-size: 24px;
+  line-height: 40px !important;
+  text-align: center;
+}
+
+.close-vecu {
+  margin-top: 6px !important;
+}
+
+.modal-subtitle-vecu{
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10px;
+}
+.modal-body.modal-body-vecu {
+  padding-top: 10px;
+}
+
+.modal-vecu-wrapper {
+  position: relative;
+  padding: 0 40px;
+
+  .modal-vecu-arrow-left, .modal-vecu-arrow-right {
+    cursor: pointer;
+    position: absolute;
+    top : 200px;
+    margin-top : -60px;
+    width: 60px;
+  }
+
+  .modal-vecu-arrow-left {
+    left: -20px;
+  }
+
+  .modal-vecu-arrow-right {
+    right:  -20px;
+  }
+
+}
+.modal-vecu-container {
+  position: relative;
+  overflow: hidden;
+
+  // This prevent "flashing" the images onto the whole page
+  height: 450px; // Arbitrary almost-fitting value, will be changed dynamically by JS
+
+  img.modal-vecu-background {
+    // The image should cover the background but almost have a size similar to ir
+    min-width: 100%;
+    max-width: 120%;
+
+    min-height: 100%;
+    max-height: 120%;
+  }
+  .modal-vecu-text-block {
+    $block-padding : 30px;
+    background: $color-white;
+
+    position: absolute;
+    top: 40px;
+
+
+
+    padding: $block-padding;
+
+    // Adapt to children margins
+    padding-top:$block-padding - 22px;
+    padding-bottom: $block-padding - 10px;
+
+    width: 55%;
+
+    &.right{
+      right:40px;
+    }
+    &.left{
+      left:40px ;
+    }
+    .modal-vecu-text-block-title{
+      font-size: 24px;
+    }
+
+    .modal-vecu-text-block-quote{
+      font-size: 16px;
+      text-align: center;
+      color: #818181;
+      width: 80%;
+      margin: auto;
+    }
+    .modal-vecu-text-block-main{
+      font-size: 13px;
+      text-align: justify;
+      font-weight:300;
+    }
+    .modal-vecu-footnote{
+      color: #818181;
+      font-weight: 300;
+      text-align: right;
+      min-height: 60px;
+      line-height: 60px;
+
+      margin-top:10px;
+      img {
+        height: 60px;
+        margin: 0 5px;
+      }
+
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// MOBILE SQUARE
+//////////////////////////////////////////////////////////////////////////////
+
+.square-entreprises {
+  background-color: $color-zircon;
+  margin-right: -10px;
+  @include square-mobile(1, 1);
+
+}
+
+.square-associations {
+  background-color: $color-serenade;
+  margin-left: -10px;
+  @include square-mobile(1, 1);
+}
+
+.square-concept {
+  background-color: $color-gun-powder;
+  color: $color-white;
+  margin-right: -10px;
+  @include square-mobile(1, 1);
+
+}
+
+.square-faq {
+  background-color: $color-fountain-blue;
+  color: $color-white;
+  margin-left: -10px;
+  @include square-mobile(1, 1);
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// BANDEAU
+//////////////////////////////////////////////////////////////////////////////
+
+.alert.bandeau-ssf-vendredi {
+  background: $color-gun-powder;
+  color: $color-white;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 16px;
+  height: 50px;
+
+  a {
+    color: $color-white;
+    text-decoration: underline;
+  }
+
+  margin: 0;
+
+  z-index: 1040;
+
+  .bandeau-close {
+    margin-left: 10px;
+
+    img {
+      height: 18px;
+    }
+  }
+
+}

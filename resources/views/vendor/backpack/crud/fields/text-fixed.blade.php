@@ -1,0 +1,57 @@
+<!-- text input -->
+<div @include('crud::inc.field_wrapper_attributes') >
+    <label>{!! $field['label'] !!}</label>
+
+    @if(isset($field['prefix']) || isset($field['suffix'])) <div class="input-group"> @endif
+        @if(isset($field['prefix'])) <div class="input-group-addon">{!! $field['prefix'] !!}</div> @endif
+        <input
+                type="text"
+                name="{{ $field['name'] }}"
+                value="{{ old($field['name']) ? old($field['name']) : (isset($field['value']) ? $field['value'] : (isset($field['default']) ? $field['default'] : '' )) }}"
+                {{ ($field['max_length'] && !$field['truncate']) ? 'maxlength=' . $field['max_length'] : '' }}
+                @include('crud::inc.field_attributes')
+        >
+        <span id="preview_{{ $field['name'] }}"></span>
+        @if(isset($field['suffix'])) <div class="input-group-addon">{!! $field['suffix'] !!}</div> @endif
+        @if(isset($field['prefix']) || isset($field['suffix'])) </div> @endif
+
+    {{-- HINT --}}
+    @if (isset($field['hint']))
+        <p class="help-block">{!! $field['hint'] !!}</p>
+    @endif
+</div>
+
+
+{{-- FIELD EXTRA CSS  --}}
+{{-- push things in the after_styles section --}}
+
+{{-- @push('crud_fields_styles')
+    <!-- no styles -->
+@endpush --}}
+
+
+{{-- FIELD EXTRA JS --}}
+{{-- push things in the after_scripts section --}}
+
+@push('crud_fields_scripts')
+    @if ($field['truncate'])
+        <script>
+            $(function(){
+                $('input[name="{{ $field['name'] }}"]').keyup(function(){
+                    var content = $(this).val();
+                    var maxLength = {{ $field['max_length'] }};
+                    var placeholder = "{{ isset($field['placeholder']) ? $field['placeholder'] : '(...)'  }}";
+
+                    $("#preview_{{ $field['name'] }}").html(
+                        content.length > maxLength
+                            ? content.substring(0, (maxLength - placeholder.length)) + placeholder
+                            : content
+                    );
+                })
+            });
+        </script>
+    @endif
+@endpush
+
+
+{{-- Note: you can use @if ($crud->checkIfFieldIsFirstOfItsType($field, $fields)) to only load some CSS/JS once, even though there are multiple instances of it --}}

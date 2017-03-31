@@ -1,0 +1,80 @@
+.modal-title-vendredi{
+  font-size : 24px;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+$modal-header-border-color : transparent;
+$modal-inner-padding: 40px;
+$modal-title-padding: 40px 40px 0px 40px;
+.modal-form  {
+  margin-left: 20px;
+
+  // reduce padding in modal form 
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12  {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.modal-close-icon {
+  height: 28px;
+}
+
+.close {
+  // Override default opacity
+  opacity: 1 !important;
+}
+//////////////////////////////////////////////////////////////////////////////
+/// MODAL : USER INSCRIPTION
+//////////////////////////////////////////////////////////////////////////////
+
+.modal-inscription-link-connection {
+  margin-top: 45px;
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+.modal-inscription-form-div {
+  border-left: solid 5px $color-serenade;
+  // compensante reduced padding in modal form
+  padding-right: 30px!important;
+}
+
+.bon-a-savoir-row {
+  margin-bottom: 30px;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// MODAL : USER CONNECTION
+//////////////////////////////////////////////////////////////////////////////
+.modal-connection-links {
+  margin-top: 25px;
+}
+.modal-connection-link-inscription a, .modal-connection-link-lost-password a{
+  color: $color-bittersweet!important;
+  font-style: italic;
+  font-weight: 300;
+}
+.modal-connection-link-inscription {
+  float: left;
+  margin-left: 50px;
+}
+.modal-connection-link-lost-password {
+  float: right;
+  margin-right: 50px;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// MODAL : USER LOGOUT
+//////////////////////////////////////////////////////////////////////////////
+
+.logout-modal-left-text{
+  background: $color-anti-flash-white;
+  font-size: 20px;
+  padding: 40px 20px;
+  margin-top: 0;
+  height: 245px;
+}

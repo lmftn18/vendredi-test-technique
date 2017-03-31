@@ -1,0 +1,198 @@
+/*
+  VARIABLES
+
+  CSS and bootstrap variables used all across the website
+
+*/
+
+//////////////////////////////////////////////////////////////////////////////
+/// COLORS DEFINITION
+//////////////////////////////////////////////////////////////////////////////
+$body-bg: #fff;
+
+$color-white: #FFFFFF;
+$color-gun-powder: #47445C;
+$color-fountain-blue: #4FC1B5;
+$color-bittersweet: #FF7473;
+$color-shamrock: #4CCF99;
+
+$color-serenade: #FFF6EA;
+$color-zircon: #E0E6E0;
+$color-anti-flash-white: #F2F6F6;
+$color-bokara-black: #282828;
+
+$color-linkedin: #0077B5;
+$color-green: #00cb9c;
+
+$color-black: $color-bokara-black;
+
+
+
+$navbar-default-bg: #fff;
+
+$navbar-height: 96px;
+$navbar-border-radius:  0;
+
+
+// Mobile
+
+
+$navbar-default-toggle-hover-bg:     $color-white;
+$navbar-default-toggle-border-color:     transparent ;
+$navbar-inverse-toggle-hover-bg:     $color-white ;
+$navbar-inverse-toggle-border-color:     transparent ;
+
+//////////////////////////////////////////////////////////////////////////////
+/// BRAND COLORS
+//////////////////////////////////////////////////////////////////////////////
+$brand-default: $color-white;
+$brand-primary: $color-zircon;
+$brand-info: $color-fountain-blue;
+$brand-success: $color-shamrock;
+$brand-warning: $color-serenade;
+$brand-danger: $color-bittersweet;
+
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+
+$component-active-bg: $color-anti-flash-white;
+
+$state-warning-bg: $brand-warning;
+$state-danger-bg: $brand-danger;
+$state-success-bg: $brand-success;
+
+$state-danger-text: $color-bittersweet;
+
+//////////////////////////////////////////////////////////////////////////////
+/// TYPOGRAPHY AND MAIN STYLING
+//////////////////////////////////////////////////////////////////////////////
+
+
+$navbar-default-bg: #fff;
+
+$navbar-height: 96px;
+$navbar-border-radius:  0;
+
+$navbar-default-link-color: #000;
+$navbar-default-border: transparent;
+
+$navbar-inverse-link-color: #fff;
+$navbar-inverse-border: transparent ;
+
+
+// Mobile
+
+
+$navbar-default-toggle-hover-bg:     $color-white;
+$navbar-default-toggle-border-color:     transparent ;
+$navbar-inverse-toggle-hover-bg:     $color-white ;
+$navbar-inverse-toggle-border-color:     transparent ;
+
+
+$font-family-sans-serif: "Lato", sans-serif;
+$headings-font-family: "Mark Pro";
+
+$font-size-base: 14px;
+$line-height-base: 1.6;
+
+$text-color: $color-bokara-black;
+$link-color: $text-color;
+
+$line-height-computed: floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+$panel-default-heading-bg: #fff;
+
+$grid-gutter-width: 40px;
+$panel-body-padding: 20px;
+
+$btn-default-bg: $color-white;
+$btn-font-weight: bold;
+
+//
+// Dark fonts for light buttons
+//
+$btn-default-color: $color-bokara-black;
+$btn-primary-color: $color-bokara-black;
+$btn-warning-color: $color-bokara-black;
+
+$padding-small-horizontal: 20px;
+$padding-base-horizontal: 30px;
+$padding-large-horizontal: 40px;
+
+//////////////////////////////////////////////////////////////////////////////
+/// INPUTS
+//////////////////////////////////////////////////////////////////////////////
+$input-bg: transparent;
+
+$input-height-base: 50px;
+$input-height-small: 35px;
+
+$input-border: $color-zircon;
+
+
+//////////////////////////////////////////////////////////////////////////////
+/// DROPDOWNS
+//////////////////////////////////////////////////////////////////////////////
+
+$dropdown-link-active-bg: $color-white;
+$dropdown-link-active-color: $color-black;
+
+$dropdown-link-hover-bg: $color-white;
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+/// TABS
+//////////////////////////////////////////////////////////////////////////////
+//
+// Only use 'nav-pills', 'nav-tabs' option is not configure and does not match the design
+//
+
+$nav-pills-active-link-hover-bg: transparent !important;
+$nav-pills-active-link-hover-color: $color-black;
+
+
+//////////////////////////////////////////////////////////////////////////////
+/// PAGINATION
+//////////////////////////////////////////////////////////////////////////////
+$pagination-border: none;
+$pagination-disabled-border: none;
+$pagination-hover-border: none;
+$pagination-active-border: none;
+
+$pagination-bg: transparent;
+
+$pagination-active-color: $color-bokara-black;
+$pagination-color: $color-bokara-black;
+$pagination-hover-bg: $color-white;
+$pagination-active-bg: $color-white;
+
+
+//////////////////////////////////////////////////////////////////////////////
+/// TAGS / LABELS
+//////////////////////////////////////////////////////////////////////////////
+
+$label-color: $color-bokara-black;
+
+//////////////////////////////////////////////////////////////////////////////
+/// ALERTS
+//////////////////////////////////////////////////////////////////////////////
+
+$alert-success-text: $color-white;
+$alert-info-text: $color-bokara-black;
+$alert-warning-text: $color-bokara-black;
+$alert-danger-text: $color-white;
+
+$alert-success-border: transparent;
+$alert-info-border: transparent;
+$alert-warning-border: transparent;
+$alert-danger-border: transparent;
+
+
+//////////////////////////////////////////////////////////////////////////////
+/// PANELS FOR ASSO/ENTREPRISES CARDS
+//////////////////////////////////////////////////////////////////////////////
+
+$panel-body-padding : 15px;
+

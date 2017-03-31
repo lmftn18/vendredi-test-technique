@@ -1,0 +1,89 @@
+//////////////////////////////////////////////////////////////////////////////
+/// CARD ASSOCIATIONS
+//////////////////////////////////////////////////////////////////////////////
+
+.background-asso {
+  background-color: $color-serenade !important;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// TOUTES LES ASSOCIATIONS
+//////////////////////////////////////////////////////////////////////////////
+#missions-asso-container {
+  background: $color-serenade;
+  padding: 60px 60px;
+}
+
+.missions-title {
+  font-size: 40px;
+}
+
+.missions-subtitle {
+  font-weight: 300;
+  font-size: 24px;
+
+  margin-top: 20px;
+}
+
+.missions-subtext {
+  font-size: 16px;
+  margin-top: 30px;
+  font-weight: 300;
+
+  a, a:hover, a:visited, a:focus {
+    color: $color-shamrock;
+  }
+}
+
+.missions-thumbnail-row {
+  margin-top: 10px;
+  img {
+    height: 100px;
+    margin: 0 5px;
+  }
+}
+
+#toutes-les-missions {
+  background: $color-serenade;
+}
+
+.missions-encart-btn {
+  background: $color-gun-powder;
+}
+
+.missions-associations-mobile {
+  padding-top: 20px;
+  background: $color-serenade;
+}
+
+.missions-asso-encart-mobile {
+  background: $color-white;
+  padding: 24px;
+  font-size: 18px;
+  margin-bottom: 20px;
+
+  .missions-asso-encart-title {
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+/// MODAL ASSOCIATION
+//////////////////////////////////////////////////////////////////////////////
+
+.modal-association-bon-a-savoir p {
+  background: $color-anti-flash-white;
+  padding: 24px;
+  text-align: justify;
+}
+
+.modal-association-buttons {
+  margin-top: 40px;
+
+  a.btn {
+    margin-right: 70px;
+
+  }
+}

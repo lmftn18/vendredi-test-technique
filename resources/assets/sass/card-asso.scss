@@ -1,0 +1,315 @@
+$panel-asso-body-padding: 30px;
+$panel-asso-body-padding-mobile: 20px;
+
+$panel-description-asso-font-size: 13px;
+$panel-description-asso-line-height: 1.4;
+$panel-description-asso-lines-to-show: 8;
+
+$besoins-font-size: 11px;
+$besoins-line-height: 1.4;
+$besoins-lines-to-show: 11;
+$space-between-text-and-bullet: 5px;
+
+$panel-description-asso-text-height : $panel-description-asso-font-size*$panel-description-asso-line-height*$panel-description-asso-lines-to-show;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//     MOBILE
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.panel-offre .row, .card-asso-text-panel, .card-asso-image-panel, .card-asso-text-panel .panel-body {
+  height: 493px;
+}
+
+
+.card-asso .panel-body {
+  padding: $panel-asso-body-padding;
+
+
+  // Association name
+  .card-asso-name {
+    margin-bottom: 15px;
+    position: relative;
+    // Fade text away if it overflows
+    &.card-asso-name-fadeout:after {
+      z-index: 10;
+      content: "";
+      text-align: right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 180px;
+      height: 22px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0px, white 60px);
+    }
+
+    .label-mission-a-pourvoir, .label-mission-pourvue {
+      z-index: 15;
+      position: absolute;
+      top:0;
+      right: 0;
+      margin:0
+    ;
+      color: $color-white;
+      font-weight: 600;
+      font-size: 10px;
+    }
+
+    .label-mission-a-pourvoir {
+      background-color: $color-fountain-blue !important;
+
+    }
+
+    .label-mission-pourvue {
+      background-color: $color-bittersweet !important;
+
+    }
+  }
+
+  // Pagination
+  .card-asso-pagination {
+    height: 22px;
+    margin: 0;
+    margin-bottom: 15px;
+
+    li > a {
+      height: 22px;
+      font-size: 12px;
+      padding: 2px 7px
+    }
+
+    li.active > a {
+      background-color: $color-anti-flash-white;
+    }
+  }
+
+  // Tagline / Titre de la mission
+  .card-asso-tagline {
+    font-size: 15px;
+    height: 42px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  // Causes
+  .card-asso-causes {
+    margin-bottom: 10px;
+    height: 62px;
+  }
+
+
+  // Long text-description
+  .panel-description-asso-text {
+    position: relative;
+    text-align: justify;
+    font-weight: 300;
+    height: $panel-description-asso-text-height ;
+    font-size: $panel-description-asso-font-size;
+    line-height: $panel-description-asso-line-height;
+
+    overflow: hidden;
+
+    // Make up for the lost space in place of the causes div
+    &.panel-description-asso-text-longer{
+      height: $panel-description-asso-text-height + 40px;
+    }
+
+    // Fade text away if it overflows
+    &:after {
+      content: "";
+      text-align: right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 70%;
+      height: $panel-description-asso-font-size*$panel-description-asso-line-height;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 90%);
+    }
+  }
+
+
+  .card-asso-logo {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    margin-right: 15px;
+    float: left;
+  }
+
+  .card-asso-btn-wrapper {
+    width: auto;
+    overflow: hidden;
+  }
+
+}
+
+.card-asso-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.panel-body-hero {
+  width: 50%;
+  float: left;
+}
+
+.card-asso-hero-wrapper {
+  position: absolute;
+  overflow: hidden;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: $panel-asso-body-padding;
+  margin-right: $grid-gutter-width / 2 + $panel-asso-body-padding;
+  margin-left: $grid-gutter-width / 2;
+}
+
+.card-asso-hero {
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  overflow: hidden;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.card-asso-mobile {
+  .panel-body-mobile {
+    // Height + "Les besoins" height + margin + causes height + padding + button height
+    height: $besoins-font-size * $besoins-line-height * $besoins-lines-to-show + 15px + 15px + 62px + 40px + 50px;
+  }
+
+}
+
+.card-asso-button-row {
+  position: absolute;
+  bottom: $panel-asso-body-padding;
+  left: $panel-asso-body-padding + $grid-gutter-width/2;
+  right: $panel-asso-body-padding + $grid-gutter-width/2;
+}
+
+.card-asso-expanded {
+  .card-asso-button-row {
+    right: $grid-gutter-width/2;
+  }
+
+  .card-asso-text-panel .panel-body {
+    margin-right: - $panel-asso-body-padding;
+  }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//     MOBILE
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.card-asso-mobile {
+  &.card-asso .panel-body {
+    padding: $panel-asso-body-padding-mobile;
+    position: relative;
+  }
+
+  .card-asso-besoins {
+    margin-top: 30px;
+    font-size: 11px;
+    margin-bottom: 0px;
+    &.card-asso-besoins-mobile {
+      margin-top: 0;
+    }
+  }
+
+  .card-asso-besoins-ul-mobile-container {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+  }
+
+  .card-asso-besoins-ul {
+    list-style: none;
+    padding-left: 5px;
+    margin-bottom: 50px;
+
+    font-size: $besoins-font-size;
+    line-height: $besoins-line-height;
+    height: $besoins-font-size * $besoins-line-height * $besoins-lines-to-show;
+    overflow: hidden;
+  }
+
+  .card-asso-besoins-ul-mobile-wrapper .card-asso-besoins-ul-mobile {
+
+    list-style: none;
+    padding-left: 5px;
+    font-size: $besoins-font-size;
+  }
+
+  .card-asso-besoins-li {
+    background-image: url(../../images/bullet-point-list.png);
+    background-repeat: no-repeat;
+    background-position: 0 9px;
+    padding: 0 $space-between-text-and-bullet;
+    background-size: 3px;
+  }
+
+  .card-asso-besoins-ul-mobile-wrapper {
+    list-style: none;
+    padding-left: 5px;
+
+    font-size: $besoins-font-size;
+    line-height: $besoins-line-height;
+    // Height + "Les besoins" height + margin
+    height: $besoins-font-size * $besoins-line-height * $besoins-lines-to-show + 15px + 15px;
+    overflow: hidden;
+    position: relative;
+
+  }
+
+  .card-asso-hero-mobile {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    margin-top: -50%;
+    z-index: 1;
+  }
+
+  .card-asso-tagline-mobile {
+    position: absolute;
+    z-index: 10;
+    color: $color-white;
+    top: 0;
+    font-size: 15px;
+    width: 80%;
+    left: 10%;
+    margin-top: 30px;
+  }
+
+  .embed-responsive-asso {
+    padding-bottom: 34.28% !important;
+    background-color: $color-gun-powder;
+  }
+
+  .card-asso-button-row-mobile {
+    position: absolute;
+    bottom: $panel-asso-body-padding-mobile;
+    left: $panel-asso-body-padding-mobile;
+    right: $panel-asso-body-padding-mobile;
+  }
+
+  .card-asso-logo-mobile {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    margin-left: 15px;
+    float: right;
+
+  }
+
+}

@@ -1,0 +1,191 @@
+//////////////////////////////////////////////////////////////////////////////
+/// DEVENIR PARTENAIRE
+//////////////////////////////////////////////////////////////////////////////
+
+
+.partenaire-subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.partenaire-logo-row {
+  height: 60px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    max-height: 100%;
+
+    &#mazars-logo {
+      margin-top: 15px;
+      height: 30px;
+    }
+  }
+}
+
+#partenaire-main {
+  @media (min-width: 768px) {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+}
+#partenaire-pour-les-entreprises {
+  background: $color-anti-flash-white;
+  min-height: 100px;
+}
+
+#partenaire-pour-les-assos {
+  background: $color-serenade;
+  min-height: 100px;
+}
+
+#partenaire-pour-les-entreprises, #partenaire-pour-les-assos {
+  padding: 10px 20px;
+
+  padding-bottom: 20px;
+
+  @media (min-width: 768px) {
+    padding: 40px 60px;
+  }
+
+  .partenaire-block-title {
+    font-size: 24px;
+    @media (min-width: 768px) {
+      font-size: 34px;
+    }
+  }
+
+  .partenaire-block-subtitle {
+    min-height: 76px;
+    font-weight: 300;
+
+    font-size: 15px;
+    @media (min-width: 768px) {
+      font-size: 22px;
+    }
+  }
+
+  .partenaire-cta {
+    margin-top: 30px;
+    @media (min-width: 768px) {
+      margin-top: 60px;
+    }
+  }
+
+  .partenaire-secondary-cta {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: underline;
+  }
+
+}
+
+// Customs active and hover states
+$icon-height: 18px;
+
+.partenaire-ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    font-size: 16px;
+    margin-bottom: 5px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    font-weight: bold;
+
+    position: relative;
+    padding-left: 30px;
+    &::before {
+      background-size: $icon-height $icon-height;
+      background-image: url('/images/active-icon.png');
+
+      content: "";
+      height: $icon-height;
+      width: $icon-height;
+
+      display: inline-block;
+      position: absolute;
+
+      // Compensate the positionning to keep the text on the same line (otherwise it would shift to bottom from 3px)
+      top: 5px;
+      left: 5px;
+      @media (min-width: 768px) {
+        top: 12px;
+      }
+
+    }
+  }
+}
+
+$underline-width: 200px;
+$underline-caret-height: 10px;
+.partenaire-quote-container {
+  padding: 20px 80px !important;
+
+  .partenaire-quote {
+    position: relative;
+    font-size: 18px;
+    color: #818181;
+    height: 120px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+
+      width: $underline-width;
+      margin-left: - $underline-width / 2;
+
+      height: 1px;
+      border-top: 5px solid $color-serenade;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px - $underline-caret-height / 2;
+      left: 50%;
+
+      width: 0px;
+      margin-left: - $underline-caret-height / 2;
+      height: 0px;
+
+      border-top: $underline-caret-height solid $color-serenade;
+      border-left: $underline-caret-height solid transparent;
+      border-right: $underline-caret-height solid transparent;
+    }
+  }
+
+  .partenaire-quote-img {
+    height: 70px;
+  }
+
+  .partnenaire-quote-text{
+    margin-top: 5px;
+
+    .partnenaire-quote-text-name {
+      font-size: 18px;
+    }
+  }
+
+  .partenaire-block-media {
+    margin-top: 40px;
+
+    .col-sm-6 {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  }
+}
