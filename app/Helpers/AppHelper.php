@@ -148,9 +148,9 @@ class AppHelper
                 $query->where( function ( $query ) use ( $likeToken, $searchFieldNames ) {
                     foreach ($searchFieldNames as $toSearchField) {
                         $query->orWhere(
-                          \DB::raw( "unaccent(" . $toSearchField . ")" ),
-                          'ilike',
-                          \DB::raw( "unaccent(" . \DB::getPdo()->quote( $likeToken ) . ")" )
+                          $toSearchField,
+                          'LIKE',
+                           $likeToken
                         );
                     }
                 } );

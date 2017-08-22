@@ -66,7 +66,7 @@ class SchoolControllerTest extends TestCase
         $school2->value = "École Normale";
         $school2->save();
 
-        $parameters = ['search' => 'ecole'];
+        $parameters = ['search' => 'École'];
         $expectedSchoolIds = [$school1->id, $school2->id];
         $this->assertSchoolSearchCallFractalWithCorrectSchool($parameters, $expectedSchoolIds);
     }

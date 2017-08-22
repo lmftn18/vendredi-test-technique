@@ -39,9 +39,9 @@ class SchoolController extends Controller
                 $query->where('value', '!=', $this->defaultSchool);
                 $query->where(function (Builder $query) use ($likeToken) {
                     $query->orWhere(
-                      \DB::raw("unaccent(value)"),
-                      'ilike',
-                      \DB::raw("unaccent(" . \DB::getPdo()->quote($likeToken) . ")")
+                      'value',
+                      'LIKE',
+                      $likeToken
                     );
                 });
             }

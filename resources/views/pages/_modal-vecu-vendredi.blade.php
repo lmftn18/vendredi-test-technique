@@ -197,5 +197,4 @@ $("#semaineVecu").modal('show');
     });
   });
 </script>
-@e
 @endpush
