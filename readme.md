@@ -19,13 +19,14 @@ Une fois la base de code prête et fonctionnelle, tu peux commencer le test.
 
 Ci-dessous te sont présentées 2 user story que tu dois implémenter.  
 - Tu peux les traiter dans l'ordre que tu veux
-- Le code back-end est testé avec PHP Unit, il est attendu de réaliser au moins un test même s'il est très simple
+- Le code back-end est testé avec PHP Unit, tu dois réaliser au moins un test même s'il est très simple
 - N'hésite pas à ajouter des commentaires dans le code pour expliquer ta démarche
 
 ### 1. Front-end
 
 
 Quand je suis sur la page [Devenir Partenaire](https://www.vendredi.cc/devenir-partenaire)
+
 Onglet de droite *Pour les associations* (div#partenaire-pour-les-assos) : 
 
 - Changer le texte du bouton "En savoir plus" pour "Nous écrire"
@@ -46,7 +47,7 @@ Onglet de droite *Pour les associations* (div#partenaire-pour-les-assos) :
 
     - Au clic sur *Envoyer* : L'information est envoyée en base de données et accessible depuis [l'admin](vendredi.cc)
     
-*Pour le design de la modal tu peux t'inspirer de cet écran  :* https://scene.zeplin.io/project/585d2e5a44917ee1154df7b2/screen/593e8ea6fae05195c983faa7
+Pour le design de la modal tu peux t'inspirer de cet écran : https://scene.zeplin.io/project/585d2e5a44917ee1154df7b2/screen/593e8ea6fae05195c983faa7
 
 
 ### 2. Back-end
@@ -71,5 +72,5 @@ Attention, tu n'as pas accès à l'admin de notre site public mais celui-ci est 
 
 A la fin du test tu dois : 
 
-- pusher ta branche sur github
+- pusher ta branche sur GitHub
 - créer une pull request https://github.com/vendredicc/vendredi-test-technique/compare
